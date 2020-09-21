@@ -14,8 +14,8 @@ find_package(
     REQUIRED COMPONENTS Widgets
 )
 
-add_executable(
-    shader-sandbox
+set(
+    SHADER_SANDBOX_SOURCES
     main.cpp
     mainwindow.ui
     mainwindow.cpp
@@ -23,6 +23,19 @@ add_executable(
     shaderprogrambuilder.cpp
     assets.qrc
 )
+
+if(APPLE)
+    add_executable(
+        shader-sandbox
+        MACOSX_BUNDLE
+        ${SHADER_SANDBOX_SOURCES}
+    )
+else()
+    add_executable(
+        shader-sandbox
+        ${SHADER_SANDBOX_SOURCES}
+    )
+endif()
 target_include_directories(
     shader-sandbox
     PRIVATE ${CMAKE_CURRENT_LIST_DIR}
