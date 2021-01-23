@@ -11,7 +11,7 @@ set(CMAKE_AUTORCC ON)
 
 find_package(
     Qt6
-    REQUIRED COMPONENTS Widgets OpenGL
+    REQUIRED COMPONENTS Widgets OpenGL OpenGLWidgets
 )
 
 set(
@@ -44,4 +44,5 @@ target_link_libraries(
     shader-sandbox
     PRIVATE Qt6::Widgets
     PRIVATE Qt6::OpenGL
+    PRIVATE Qt6::OpenGLWidgets
 )
