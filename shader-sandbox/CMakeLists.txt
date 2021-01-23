@@ -10,7 +10,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
 find_package(
-    Qt5
+    Qt6
     REQUIRED COMPONENTS Widgets
 )
 
@@ -42,5 +42,5 @@ target_include_directories(
 )
 target_link_libraries(
     shader-sandbox
-    Qt5::Widgets
+    Qt6::Widgets
 )
