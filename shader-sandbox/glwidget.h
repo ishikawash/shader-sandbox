@@ -8,7 +8,7 @@
 #include <QTimer>
 #include <QVector2D>
 #include <QMatrix4x4>
-#include <QOpenGLWidget>
+#include <QtOpenGLWidgets/QOpenGLWidget>
 #include <QOpenGLFunctions>
 #include <QOpenGLBuffer>
 #include "shaderprogrambuilder.h"
