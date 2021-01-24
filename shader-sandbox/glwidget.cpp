@@ -1,5 +1,5 @@
 #include <QApplication>
-#include <QDesktopWidget>
+#include <QScreen>
 #include <QMouseEvent>
 #include <QDragEnterEvent>
 #include <QDropEvent>
@@ -152,7 +152,7 @@ void GLWidget::render()
 
 void GLWidget::resizeGL(int width, int height)
 {
-    float pixelRatio = QApplication::desktop()->devicePixelRatioF();
+    float pixelRatio = QApplication::primaryScreen()->devicePixelRatio();
     float _width = static_cast<float>(width);
     float _height = static_cast<float>(height);
     _resolution.setX(_width);
